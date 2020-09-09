@@ -15,7 +15,12 @@
 """
 
 def get_predicted_ocupation_message(age):
-    age = float(str(age))
+    try:
+        age = float(str(age))
+    except:
+        return 'Это не похоже на число! Запустите эту программу заново и '\
+            'введите число.'
+
     if (age >= 0 + 7 + 11 + 5):
         return 'Скорее всего, вы работаете или являетесь \
             домохозяйкой/домохозяином'
