@@ -96,3 +96,13 @@ if __name__ == "__main__":
 # Интересно что подбрасывается предупреждение
 # 75: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
 # constellation = ephem.constellation(ephem_planet)
+# Пока всё выглядит так как будто это происходит исключительно где-то в недрах
+# библиотеки PyEphem. Вот пример с сайта этой библиотеки:
+# https://rhodesmill.org/pyephem/
+# import ephem
+# mars = ephem.Mars()
+# mars.compute('2007/10/02 00:50:22')
+# ephem.constellation(mars)
+# Что даёт такой результат:
+# <stdin>:1: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+# ('Gem', 'Gemini')

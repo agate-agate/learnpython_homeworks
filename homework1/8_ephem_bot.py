@@ -54,7 +54,7 @@ def tell_user_about_planet(update, context):
 
     try:
         _ = str(text_pieces[1])
-    except:
+    except IndexError:
         _ = ''
     raw_planet_name = _
 
