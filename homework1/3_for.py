@@ -40,14 +40,19 @@ def main():
                 school_class['average_scores'] = \
                     school_class['total_scores'] / school_class['total_students']
         print(
-            'Средний бал по классу ' + record['school_class'] + ' ' + \
-                str(school_class['average_scores'])
+            'Средний бал по классу {school_class_label}: {average_score}'.format(
+                school_class_label = record['school_class'],
+                average_score = str(school_class['average_scores'])
+            )
         )
     if school['total_students'] > 0:
         school['average_scores'] = \
             school['total_scores'] / school['total_students']
+
     print(
-        'Средний бал по школе ' + str(school['average_scores'])
+        'Средний бал по школе: {average_score}'.format(
+            average_score = str(school['average_scores'])
+        )
     )
 
 if __name__ == "__main__":
