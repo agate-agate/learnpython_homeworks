@@ -63,10 +63,9 @@ def get_constellation_label_for_planet(raw_planet_name):
     constellation = ephem.constellation(ephem_planet)
 
     try:
-        _ = constellation[1]
+        constellation_label = constellation[1]
     except IndexError:
-        _ = ''
-    constellation_label = _
+        constellation_label = ''
 
     return constellation_label
 
