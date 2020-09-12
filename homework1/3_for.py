@@ -36,8 +36,9 @@ def main():
             school['total_students'] += 1
             school_class['total_scores']   += score
             school_class['total_students'] += 1
-            school_class['average_scores'] = \
-                school_class['total_scores'] / school_class['total_students']
+            if school_class['total_students'] > 0:
+                school_class['average_scores'] = \
+                    school_class['total_scores'] / school_class['total_students']
         print(
             'Средний бал по классу ' + record['school_class'] + ' ' + \
                 str(school_class['average_scores'])
