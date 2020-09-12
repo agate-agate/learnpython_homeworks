@@ -39,11 +39,8 @@ def normalize_planet_name(raw_planet_name):
 def get_ephem_planet(raw_planet_name):
     planet_name = normalize_planet_name(raw_planet_name);
     ephem_planet = None
-    try:
-        if (planet_name != ''):
-            ephem_planet = (getattr(ephem, planet_name))()
-    except AttributeError:
-        ephem_planet = None
+    if hasattr(ephem, planet_name):
+        ephem_planet = (getattr(ephem, planet_name))()
     return ephem_planet
 
 def get_current_ephem_datetime():
