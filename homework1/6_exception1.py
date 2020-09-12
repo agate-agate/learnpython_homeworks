@@ -34,7 +34,7 @@ def ask_user():
             answer = str(conversation_responses.get(query, ''))
 
             if (answer != ''):
-                print('Ответ: ' + answer)
+                print(f'Ответ: {answer}')
         except KeyboardInterrupt:
             print('\nПока!')
             break
