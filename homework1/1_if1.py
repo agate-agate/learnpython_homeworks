@@ -30,7 +30,7 @@ def get_predicted_ocupation_message(age):
             'введите число.'
 
     if age >= MIN_LIMIT_ENLIGHTENED:
-        return 'Скорее всего, вы работаете или являетесь ' \
+        return 'Скорее всего, вы работаете или являетесь '\
             'домохозяйкой/домохозяином'
 
     if age >= MIN_LIMIT_UNIVERSITY:
