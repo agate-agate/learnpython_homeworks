@@ -14,6 +14,14 @@
 
 """
 
+MIN_LIMIT_EMBRYO       = - 9 / 12
+MIN_LIMIT_BIRTH        = 0
+MIN_LIMIT_NURSERY      = 1.5
+MIN_LIMIT_KINDERGARTEN = 3
+MIN_LIMIT_SCHOOL       = 7
+MIN_LIMIT_UNIVERSITY   = MIN_LIMIT_SCHOOL + 11
+MIN_LIMIT_ENLIGHTENED  = MIN_LIMIT_UNIVERSITY + 5
+
 def get_predicted_ocupation_message(age):
     try:
         age = float(str(age))
@@ -21,21 +29,28 @@ def get_predicted_ocupation_message(age):
         return 'Это не похоже на число! Запустите эту программу заново и '\
             'введите число.'
 
-    if (age >= 0 + 7 + 11 + 5):
+    if age >= MIN_LIMIT_ENLIGHTENED:
         return 'Скорее всего, вы работаете или являетесь ' \
             'домохозяйкой/домохозяином'
-    if (age >= 0 + 7 + 11):
+
+    if age >= MIN_LIMIT_UNIVERSITY:
         return 'Скорее всего, вы учитесь в ВУЗе'
-    if (age >= 0 + 7):
+
+    if age >= MIN_LIMIT_SCHOOL:
         return 'Скорее всего, вы учитесь в школе'
-    if (age >= 0 + 3):
+
+    if age >= MIN_LIMIT_KINDERGARTEN:
         return 'Скорее всего, вы учитесь в детском саду'
-    if (age >= 0 + 1.5):
+
+    if age >= MIN_LIMIT_NURSERY:
         return 'Скорее всего, вы находитесь в яслях'
-    if (age >= 0):
+
+    if age >= MIN_LIMIT_BIRTH:
         return 'Скорее всего, вы ещё слишком молоды для яслей'
-    if (age >= (- 9 / 12)):
+
+    if age >= MIN_LIMIT_EMBRYO:
         return 'Скорее всего, вы ещё находитесь в зародыше'
+
     return 'Скорее всего, вы ещё не были зачаты'
 
 def main():
