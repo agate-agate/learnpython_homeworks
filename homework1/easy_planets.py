@@ -93,9 +93,10 @@ def main():
 if __name__ == "__main__":
     main()
 
-# Интересно что подбрасывается предупреждение
-# 75: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
+# Интересно что при запуске main, подбрасывается предупреждение
+# easy_planets.py:64: DeprecationWarning: PY_SSIZE_T_CLEAN will be required for '#' formats
 # constellation = ephem.constellation(ephem_planet)
+#
 # Пока всё выглядит так как будто это происходит исключительно где-то в недрах
 # библиотеки PyEphem. Вот пример с сайта этой библиотеки:
 # https://rhodesmill.org/pyephem/
