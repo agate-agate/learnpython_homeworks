@@ -31,7 +31,7 @@ def normalize_planet_name(raw_planet_name):
         'плутон': 'Pluto',
     }
 
-    _ = (str(raw_planet_name)).strip()
+    _ = (str(raw_planet_name)).strip().lower()
     _ = aliases.get(_, '')
     planet_name = _;
 
