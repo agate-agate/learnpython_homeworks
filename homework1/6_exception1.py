@@ -17,6 +17,7 @@ def ask_user():
     conversation_responses = {
         '2 + 2?': '5',
         'spam?': ('Vikings approve. ' * 8).strip(),
+        'cat?': 'Defenestration!'
         'wound?': 'But a flesh one!',
         'rabbit?': 'Well, that\'s no ordinary rabbit! That\'s the most ' \
             'foul, cruel, and bad-tempered rodent you ever set eyes on!',
