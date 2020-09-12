@@ -10,6 +10,18 @@
 * Посчитать и вывести средний балл по каждому классу.
 """
 
+def get_average_for_list_of_scores(list_of_scores):
+    if not isinstance(list_of_scores, list):
+        return 0
+
+    length = len(list_of_scores)
+    if not (length > 0):
+        return 0
+
+    total_score = sum(list_of_scores)
+
+    return total_score / length
+
 def main():
     """
     Эта функция вызывается автоматически при запуске скрипта в консоли
@@ -20,40 +32,18 @@ def main():
         {'school_class': '2b', 'scores': [3,5,7,]},
         {'school_class': '7b', 'scores': [4,5,]},
     ]
-    school = {
-        'total_scores':   0,
-        'total_students': 0,
-        'average_scores': 0,
-    }
+    school_scores = []
     for record in scores_structure:
-        school_class = {
-            'total_scores':   0,
-            'total_students': 0,
-            'average_scores': 0,
-        }
-        for score in record['scores']:
-            school['total_scores']   += score
-            school['total_students'] += 1
-            school_class['total_scores']   += score
-            school_class['total_students'] += 1
-            if school_class['total_students'] > 0:
-                school_class['average_scores'] = \
-                    school_class['total_scores'] / school_class['total_students']
-        print(
-            'Средний бал по классу {school_class_label}: {average_score}'.format(
-                school_class_label = record['school_class'],
-                average_score = str(school_class['average_scores'])
-            )
-        )
-    if school['total_students'] > 0:
-        school['average_scores'] = \
-            school['total_scores'] / school['total_students']
 
-    print(
-        'Средний бал по школе: {average_score}'.format(
-            average_score = str(school['average_scores'])
-        )
-    )
+        school_class_label  = record['school_class']
+        school_class_scores = record['scores']
+        school_scores += school_class_scores
+
+        average_score = get_average_for_list_of_scores(school_class_scores)
+        print(f'Средний бал по классу {school_class_label}: {average_score}')
+
+    average_score = get_average_for_list_of_scores(school_scores)
+    print(f'Средний бал по школе: {average_score}')
 
 if __name__ == "__main__":
     main()
