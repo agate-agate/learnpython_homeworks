@@ -63,9 +63,9 @@ def tell_user_about_planet(update, context):
 
     message_lines = [
         'Вызван /planet',
-        'Ты хочешь узнать про планету: ' + raw_planet_name,
-        'Которая распозналась как: '     + planet_name,
-        'Она находится в созвездии: '    + constellation_label,
+        f'Ты хочешь узнать про планету: {raw_planet_name}',
+        f'Которая распозналась как: {planet_name}',
+        f'Она находится в созвездии: {constellation_label}',
     ]
     update.message.reply_text('\n'.join(message_lines))
 
