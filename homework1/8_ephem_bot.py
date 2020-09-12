@@ -53,10 +53,9 @@ def tell_user_about_planet(update, context):
     text_pieces = user_text.split()
 
     try:
-        _ = str(text_pieces[1])
+        raw_planet_name = str(text_pieces[1])
     except IndexError:
-        _ = ''
-    raw_planet_name = _
+        raw_planet_name = ''
 
     planet_name = easy_planets.normalize_planet_name(raw_planet_name)
 
