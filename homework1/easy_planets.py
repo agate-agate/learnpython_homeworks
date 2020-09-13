@@ -49,8 +49,7 @@ def get_current_ephem_datetime():
     ephem_datetime = datetime.utcnow().strftime('%Y/%m/%d %H:%M:%S')
     return ephem_datetime
 
-def get_constellation_label_for_planet(raw_planet_name):
-    ephem_planet = get_ephem_planet(raw_planet_name)
+def get_constellation_label_for_planet(ephem_planet):
     if ephem_planet == None:
         return ''
 
@@ -80,7 +79,12 @@ def main():
     print(planet_name)
     print('')
 
-    constellation_label = get_constellation_label_for_planet(raw_planet_name)
+    ephem_planet = get_ephem_planet(raw_planet_name)
+    print('Планета:')
+    print(ephem_planet)
+    print('')
+
+    constellation_label = get_constellation_label_for_planet(ephem_planet)
     print('Созвездие:')
     print(constellation_label)
     print('')

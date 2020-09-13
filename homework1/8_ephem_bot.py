@@ -59,7 +59,9 @@ def tell_user_about_planet(update, context):
 
     planet_name = easy_planets.normalize_planet_name(raw_planet_name)
 
-    constellation_label = easy_planets.get_constellation_label_for_planet(raw_planet_name)
+    ephem_planet = easy_planets.get_ephem_planet(planet_name)
+
+    constellation_label = easy_planets.get_constellation_label_for_planet(ephem_planet)
 
     message_lines = [
         'Вызван /planet',
