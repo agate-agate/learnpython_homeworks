@@ -11,8 +11,6 @@
 """
 
 def get_average_for_list_of_scores(list_of_scores):
-    if not isinstance(list_of_scores, list):
-        return 0
 
     length = len(list_of_scores)
     if not (length > 0):
