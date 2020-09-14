@@ -14,7 +14,6 @@ def ask_user():
     """
     Замените pass на ваш код
     """
-    is_further_trolling_necessary = True
     while True:
         answer = input('Как дела? ')
         if (answer == 'Хорошо'):
