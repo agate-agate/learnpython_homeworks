@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# secret settings for Telegram bots - keys, proxy credentials, etc.
+bot_settings.py
