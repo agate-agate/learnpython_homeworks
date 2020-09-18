@@ -72,7 +72,7 @@ def main():
     print(datetime_for_ephem)
     print('')
 
-    raw_planet_name = str(input('Введите имя планеты: '))
+    raw_planet_name = input('Введите имя планеты: ')
 
     planet_name = normalize_planet_name(raw_planet_name)
     print('Нормализованное имя планеты:')
