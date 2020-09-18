@@ -17,14 +17,14 @@ def ask_user():
     conversation_responses = {
         '2 + 2?': '5',
         'spam?': ('Vikings approve. ' * 8).strip(),
-        'cat?': 'Defenestration!'
+        'cat?': 'Defenestration!',
         'wound?': 'But a flesh one!',
         'rabbit?': 'Well, that\'s no ordinary rabbit! That\'s the most ' \
             'foul, cruel, and bad-tempered rodent you ever set eyes on!',
     }
     while True:
         try:
-            query = (str(input('\nЗадайте вопрос: '))).strip()
+            query = input('\nЗадайте вопрос: ').lower().strip()
 
             # Способ прекрарить диалог преждевременно.
             if query.lower() == 'goodbye':

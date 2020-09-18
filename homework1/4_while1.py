@@ -15,8 +15,8 @@ def ask_user():
     Замените pass на ваш код
     """
     while True:
-        answer = input('Как дела? ')
-        if (answer == 'Хорошо'):
+        answer = input('Как дела? ').lower()
+        if (answer == 'хорошо'):
             break;
 
 
