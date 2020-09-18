@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# These files in homework2 should not be tracked
+/homework2/3_dict_to_csv__result__export.csv

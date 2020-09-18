@@ -36,7 +36,7 @@ def main():
             'job': 'Жуткий хтонизм',
         },
     ]
-    with open('3_export.csv', 'w', encoding='utf-8') as file:
+    with open('3_dict_to_csv__result__export.csv', 'w', encoding='utf-8') as file:
         fields = ['name', 'age', 'job']
         writer = csv.DictWriter(file, fields, delimiter=':')
         # writer.writeheader()
